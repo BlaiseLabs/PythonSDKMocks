@@ -1,0 +1,67 @@
+{
+  "mocked_modules": {
+    "os": {
+      "methods": {
+        "listdir": {
+          "return_value": ["file1.txt", "file2.txt", "folder1"],
+          "signature": ["path"]
+        },
+        "remove": {
+          "return_value": null,
+          "signature": ["path"]
+        },
+        "mkdir": {
+          "return_value": null,
+          "signature": ["path", "mode", "exist_ok"]
+        },
+        "rmdir": {
+          "return_value": null,
+          "signature": ["path"]
+        },
+        "rename": {
+          "return_value": null,
+          "signature": ["src", "dst"]
+        },
+        "stat": {
+          "return_value": {
+            "st_mode": 33204,
+            "st_ino": 12345678,
+            "st_dev": 16777220,
+            "st_nlink": 1,
+            "st_uid": 501,
+            "st_gid": 20,
+            "st_size": 1024,
+            "st_atime": 1633072800,
+            "st_mtime": 1633072800,
+            "st_ctime": 1633072800
+          },
+          "signature": ["path"]
+        },
+        "getcwd": {
+          "return_value": "/mocked/current/directory",
+          "signature": []
+        },
+        "chdir": {
+          "return_value": null,
+          "signature": ["path"]
+        },
+        "path.exists": {
+          "return_value": true,
+          "signature": ["path"]
+        },
+        "path.isdir": {
+          "return_value": true,
+          "signature": ["path"]
+        },
+        "path.isfile": {
+          "return_value": false,
+          "signature": ["path"]
+        },
+        "path.join": {
+          "return_value": "/mocked/joined/path",
+          "signature": ["path", "other"]
+        }
+      }
+    }
+  }
+}
