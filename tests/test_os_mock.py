@@ -1,16 +1,10 @@
 import unittest
-from main import MockManager
-import os  # Import the os module to be mocked
-import json
+from MockManager import MockManager
+import os 
 
 
 mock_file_path = "./mocks/os_mock_data.json"  # Update to the correct file path
 
-# Assuming the file structure is correct, the MockManager will load from this file now.
-# Test class for the mocked os module with updated mocks
-import unittest
-from unittest.mock import patch
-import os
 
 class TestMockedOSModule(unittest.TestCase):
     def setUp(self):

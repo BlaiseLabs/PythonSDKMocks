@@ -1,8 +1,6 @@
 import unittest
-import json
-from unittest.mock import MagicMock, patch
-from main import MockManager
-import os  # Import the os module to be mocked
+from MockManager import MockManager
+import os  # Import the module to be mocked
 
 class TestOSMockMethodsExist(unittest.TestCase):
     def setUp(self):
