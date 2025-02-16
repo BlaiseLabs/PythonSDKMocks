@@ -1,4 +1,4 @@
-# Python SDK Mocks
+# Python SDK Mock Library
 
 Welcome to the **Python SDK Mocks** project! This library provides pre-built mock implementations of popular SDKs to help developers streamline testing workflows. The project is part of Hacktoberfest and welcomes contributions from the community!
 
