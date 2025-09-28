@@ -41,7 +41,10 @@ For example, this mock file (`os_mock_data.json`) can be used to mock common fil
 You can use the `MockManager` to apply these mocks in your tests:
 
 ```python
-from MockManager import MockManager
+import os
+import unittest
+
+from sdk_mocks import MockManager
 
 class TestFileSystem(unittest.TestCase):
     def setUp(self):
@@ -73,7 +76,7 @@ If you'd like to contribute mocks for these or other SDKs, feel free to submit a
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.6+
 - `unittest` for running tests
 
 ### Installation
@@ -81,8 +84,8 @@ If you'd like to contribute mocks for these or other SDKs, feel free to submit a
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/python-sdk-mocks.git
-cd python-sdk-mocks
+git clone https://github.com/BlaiseLabs/PythonSDKMocks.git
+cd PythonSDKMocks
 ```
 
 ### Running Tests
