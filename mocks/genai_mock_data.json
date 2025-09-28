@@ -1,0 +1,48 @@
+{
+  "mocked_modules": {
+    "genai": {
+      "methods": {
+        "client": {
+          "return_value": {
+            "models": {
+              "generate_content": {
+                "text": "mocked response",
+                "candidates": [
+                  {
+                    "content": {
+                      "parts": [
+                        {
+                          "text": "mocked response"
+                        }
+                      ]
+                    },
+                    "finish_reason": "STOP"
+                  }
+                ]
+              }
+            }
+          },
+          "signature": ["api_key"]
+        },
+        "models.generate_content": {
+          "return_value": {
+            "text": "mocked response",
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "mocked response"
+                    }
+                  ]
+                },
+                "finish_reason": "STOP"
+              }
+            ]
+          },
+          "signature": ["model", "prompt"]
+        }
+      }
+    }
+  }
+}
