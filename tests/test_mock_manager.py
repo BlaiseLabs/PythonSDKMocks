@@ -1,5 +1,5 @@
 import unittest
-from MockManager import MockManager
+from sdk_mocks import MockManager
 import os  # Import the module to be mocked
 
 class TestOSMockMethodsExist(unittest.TestCase):
