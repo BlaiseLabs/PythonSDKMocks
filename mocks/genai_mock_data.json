@@ -1,46 +1,17 @@
 {
   "mocked_modules": {
-    "genai": {
+    "google.genai": {
       "methods": {
-        "client": {
-          "return_value": {
-            "models": {
-              "generate_content": {
-                "text": "mocked response",
-                "candidates": [
-                  {
-                    "content": {
-                      "parts": [
-                        {
-                          "text": "mocked response"
-                        }
-                      ]
-                    },
-                    "finish_reason": "STOP"
-                  }
-                ]
+        "Client": {
+          "models": {
+            "generate_content": {
+              "return_value": {
+                "text": "This is a mocked response from Gemini"
               }
             }
           },
+          "return_value": "MockedClient",
           "signature": ["api_key"]
-        },
-        "models.generate_content": {
-          "return_value": {
-            "text": "mocked response",
-            "candidates": [
-              {
-                "content": {
-                  "parts": [
-                    {
-                      "text": "mocked response"
-                    }
-                  ]
-                },
-                "finish_reason": "STOP"
-              }
-            ]
-          },
-          "signature": ["model", "prompt"]
         }
       }
     }
