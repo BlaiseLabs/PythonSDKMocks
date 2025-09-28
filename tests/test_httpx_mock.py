@@ -21,7 +21,6 @@ class TestMockedHTTPXModule(unittest.TestCase):
 
         response = httpx.get("https://api.example.com/users")
 
-        # レスポンスの検証
         expected_response = {
             "status_code": 200,
             "json": {"message": "Mocked GET response"},
@@ -74,7 +73,6 @@ class TestMockedHTTPXModule(unittest.TestCase):
     def test_mocked_httpx_async_client_get(self):
         """Test mocked httpx.AsyncClient.get method."""
         if hasattr(httpx, 'AsyncClient'):
-            # Test AsyncClient mock behavior
             response = httpx.AsyncClient.get("https://api.example.com/async/users")
 
             expected_response = {
@@ -105,10 +103,8 @@ class TestMockedHTTPXModule(unittest.TestCase):
             self.skipTest("AsyncClient not available in mock")
 
 
-# テストスイートを作成して実行
 suite = unittest.TestSuite()
 
-# HTTPXモックテストを追加
 suite.addTest(TestMockedHTTPXModule('test_mocked_httpx_get'))
 suite.addTest(TestMockedHTTPXModule('test_mocked_httpx_post'))
 suite.addTest(TestMockedHTTPXModule('test_mocked_httpx_put'))
