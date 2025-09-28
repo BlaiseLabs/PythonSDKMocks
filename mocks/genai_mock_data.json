@@ -1,0 +1,19 @@
+{
+  "mocked_modules": {
+    "google.genai": {
+      "methods": {
+        "Client": {
+          "models": {
+            "generate_content": {
+              "return_value": {
+                "text": "This is a mocked response from Gemini"
+              }
+            }
+          },
+          "return_value": "MockedClient",
+          "signature": ["api_key"]
+        }
+      }
+    }
+  }
+}
